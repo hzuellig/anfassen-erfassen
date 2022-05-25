@@ -1,0 +1,24 @@
+@font-face {
+    font-family: 'Retalic_30_Th';
+    src: url('../fonts/GT-Planar-Retalic-30-Thin-Trial.woff2') format('woff2');
+}
+
+@font-face {
+    font-family: 'Italic_30_Th';
+    src: url('../fonts/GT-Planar-Italic-30-Thin-Trial.woff2') format('woff2');
+}
+
+body {
+    background-color: #050d3c;
+}
+
+h1 {
+    font-family: 'Italic_30_Th', 'Helvetica';
+    color: #905d9b;
+    left: 1/12em;
+}
+
+.retalic {
+    font-family: 'Retalic_30_Th', 'Helvetica';
+    color: #905d9b;
+}

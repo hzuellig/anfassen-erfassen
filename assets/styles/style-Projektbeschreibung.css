@@ -1,0 +1,68 @@
+@font-face {
+    font-family: 'GT Planar Regular';
+    src: url('../fonts/GT-Planar-Regular-Trial.woff2') format('woff2');
+}
+
+body {
+    margin: none;
+    padding-left: 12.5%;
+    padding-right: 12.5%;
+    font-family: GT Planar Regular;
+    font-weight: 400;
+    font-style: normal;
+    background-color: white;
+    color: #434343;
+}
+
+p {
+    text-align: justify;
+    hyphens: auto;
+}
+
+ul {
+    line-height: 200%;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+.container {
+    display: flex;
+    justify-content: space-around
+}
+
+.item-left {
+    width: 25%;
+}
+
+.nav {
+    position: fixed;
+}
+
+.content {
+    width: 75%;
+}
+
+a {
+    text-decoration: none;
+    color: #434343;
+    opacity: 20%;
+}
+
+a:hover {
+    color: #434343;
+    opacity: 100%;
+    font-size: larger;
+}
+
+hr {
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+
+.hr2 {
+    opacity: 20%;
+    margin-top: 0px;
+    margin-bottom: 0px;
+}

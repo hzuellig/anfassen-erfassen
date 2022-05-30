@@ -1,24 +1,58 @@
-@font-face {
-    font-family: 'Retalic_30_Th';
-    src: url('../fonts/GT-Planar-Retalic-30-Thin-Trial.woff2') format('woff2');
-}
-
-@font-face {
-    font-family: 'Italic_30_Th';
-    src: url('../fonts/GT-Planar-Italic-30-Thin-Trial.woff2') format('woff2');
-}
-
-body {
-    background-color: #050d3c;
-}
-
-h1 {
-    font-family: 'Italic_30_Th', 'Helvetica';
-    color: #905d9b;
-    left: 1/12em;
-}
-
-.retalic {
-    font-family: 'Retalic_30_Th', 'Helvetica';
-    color: #905d9b;
-}
+        @font-face {
+            font-family: 'Retalic_30_Lt';
+            src: url('../fonts/GT-Planar-Retalic-30-Light-Trial.woff2') format('woff2');
+        }
+        
+        @font-face {
+            font-family: 'Italic_30_Lt';
+            src: url('../fonts/GT-Planar-Italic-30-Light-Trial.woff2') format('woff2');
+        }
+        
+        @font-face {
+            font-family: 'Regular_Lt';
+            src: url('../fonts/GT-Planar-Light-Trial.woff2') format('woff2');
+        }
+        
+        body {
+            background-color: #050d3c;
+            margin: 0;
+            color: #628497;
+            font-family: Helvetica, sans-serif;
+            height: 5000px;
+        }
+        
+        header {
+            display: flex;
+        }
+        
+        h1 {
+            font-family: 'Italic_30_Lt', 'Helvetica';
+            color: #893c6f;
+            margin: 0;
+            font-size: 2rem;
+            padding: 2rem;
+            display: inline;
+        }
+        
+        a.main_title {
+            text-decoration: none;
+            color: #893c6f;
+            font-size: 3rem;
+        }
+        
+        span {
+            font-family: 'Retalic_30_Lt';
+        }
+        
+        canvas {
+            display: block;
+        }
+        
+        a {
+            color: #893c6f;
+            font-size: 1.2 rem;
+            font-weight: 500;
+            text-decoration: none;
+            padding-left: 5%;
+            font-size: 1.4rem;
+        }

@@ -1,26 +1,63 @@
 @font-face {
-    font-family: 'GT Planar Regular';
-    src: url('../fonts/GT-Planar-Regular-Trial.woff2') format('woff2');
+    font-family: 'Retalic_30_Lt';
+    src: url('../fonts/GT-Planar-Retalic-30-Light-Trial.woff2') format('woff2');
+}
+
+@font-face {
+    font-family: 'Italic_30_Lt';
+    src: url('../fonts/GT-Planar-Italic-30-Light-Trial.woff2') format('woff2');
+}
+
+@font-face {
+    font-family: 'Regular_Lt';
+    src: url('../fonts/GT-Planar-Light-Trial.woff2') format('woff2');
 }
 
 body {
     margin: none;
-    padding-left: 12.5%;
+    padding-left: 1%;
     padding-right: 12.5%;
-    font-family: GT Planar Regular;
+    font-family: Regular_Lt;
     font-weight: 400;
     font-style: normal;
     background-color: white;
-    color: #434343;
+    color: #050d3c;
+    background-color: white;
+}
+
+h1 {
+    font-family: Italic_30_Lt;
+    display: inline-block;
+    color: #893c6f;
+}
+
+h2 {
+    font-size: 2rem;
+}
+
+h3 {
+    font-family: Helvetica, Arial, sans-serif;
+    font-weight: 500;
+}
+
+h4 {
+    font-size: 1.2rem;
 }
 
 p {
     text-align: justify;
     hyphens: auto;
+    line-height: 125%;
+    font-family: Helvetica, Arial, sans-serif;
+    font-size: 1.2rem;
+    font-weight: 300;
 }
 
 ul {
-    line-height: 200%;
+    line-height: 180%;
+    font-family: Helvetica, Arial, sans-serif;
+    font-size: 1.2rem;
+    font-weight: 300;
 }
 
 html {
@@ -29,14 +66,16 @@ html {
 
 .container {
     display: flex;
-    justify-content: space-around
+    justify-content: space-around;
 }
 
 .item-left {
     width: 25%;
+    padding-bottom: 0;
 }
 
 .nav {
+    padding-top: 2%;
     position: fixed;
 }
 
@@ -45,15 +84,43 @@ html {
 }
 
 a {
+    color: #893c6f;
+    font-size: 1.2 rem;
+    font-weight: 500;
     text-decoration: none;
-    color: #434343;
-    opacity: 20%;
+    padding-left: 5%;
+    font-size: 1.4rem;
+}
+
+#nav_big {
+    font-size: 1.4rem;
+    font-family: Italic_30_Lt;
+}
+
+#nav_small {
+    font-size: 1.2rem;
+    font-family: Helvetica, Arial, sans-serif;
+    font-weight: 300;
+}
+
+#nav_big:hover {
+    font-family: Retalic_30_Lt;
+}
+
+a.main_title {
+    text-decoration: none;
+    color: #893c6f;
+    font-size: 3rem;
+}
+
+a.main_title:hover {
+    font-family: Italic_30_Lt;
 }
 
 a:hover {
-    color: #434343;
+    color: #050d3c;
     opacity: 100%;
-    font-size: larger;
+    font-family: Italic_30_Lt;
 }
 
 hr {
@@ -65,4 +132,45 @@ hr {
     opacity: 20%;
     margin-top: 0px;
     margin-bottom: 0px;
+}
+
+header {
+    display: inline-block;
+}
+
+.img_coordinates_container {
+    display: flex;
+}
+
+.img_coordinates {
+    padding-right: 3rem;
+}
+
+.img_linkeHand_container {
+    display: flex;
+}
+
+.img_linkeHand {
+    width: 47%;
+    height: auto;
+    padding-right: 3rem;
+    padding-bottom: 3rem;
+}
+
+.img_rechteHand_container {
+    display: flex;
+}
+
+.img_rechteHand {
+    width: 47%;
+    height: auto;
+    padding-right: 3rem;
+}
+
+.img_haut_container {
+    display: flex;
+}
+
+.img_haut {
+    padding-right: 3rem;
 }

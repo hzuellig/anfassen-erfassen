@@ -13,7 +13,7 @@ function preload() {
     let url_test = "/assets/json/tracking.json";
     loadJSON(url_test, loaded);
 
-
+    //png1 = loadImage('/assets/img/patterns/4Zeichenfläche 1.png');
 
 
     patterns[0] = loadImage('/assets/img/patterns/patterns-01.png');
@@ -62,11 +62,14 @@ function preload() {
     patterns[43] = loadImage('/assets/img/patterns/patterns-44.png');
 }
 
+
+
+
+
 //Alles was nur einmal, beim ersten Laden der Seite ausgeführt werden soll
 function setup() {
     //Canvas erstellen und einmitten abhängig von der window-Grösse; müsste noch automatischen Refresh bei canvasResized programmieren
     var coordinate_canvas = createCanvas(700, 700);
-    //coordinate_canvas.parent('canvas_container');
     coordinate_canvas.position(windowWidth / 2 - 350, windowHeight / 1.7 - 350);
 
     cell_size = width / col
@@ -75,11 +78,6 @@ function setup() {
     let save_button = createButton("Speichern");
     save_button.position(40, 990);
     save_button.mousePressed(saveSketch);
-    save_button.style('background-color', '#050d3c');
-    save_button.style('color', '#893c6f');
-    save_button.style('border-color', '#893c6f');
-    save_button.style('border-radius', '10%');
-    save_button.style('padding', '0.3rem');
 
     angleMode(DEGREES);
 
@@ -127,7 +125,6 @@ function draw() {
         show_gesture(i)
     }
 
-
     stroke(255, 0, 0);
 
 
@@ -144,7 +141,9 @@ function grid(value) {
     // console.log(face_positions)
     for (let x = 0; x <= col; x += 1) {
         for (let y = 0; y <= row; y += 1) {
-            fill('#060C3C');
+            // fill('#060C3C');
+            // fill('#000000');
+            fill('#000220');
 
             square(x * cell_size, y * cell_size, cell_size)
 
@@ -171,32 +170,47 @@ function show_gesture(value) {
                     let bild;
                     let welcheHand;
                     for (let h = 0; h < hand.length; h++) {
-                        bildnummer = hand[h].substr(1, hand[h].length);
-                        welcheHand = hand[h].substr(0, 1);
-                        bild = patterns[bildnummer - 1];
-                        // fill(255, 0, 0);
-                        //square(x * cell_size, y * cell_size, cell_size)
-                        console.log(bildnummer - 1)
+                        console.log(hand[h]);
+                        const hands = hand[h].split(",")
+                        for (const el of hands) {
+                            const parts = el.split("")
+                            welcheHand = parts[0]
+                            bildnummer = parts[1]
+                            console.log(bildnummer);
+                            if (bildnummer == undefined) {
+                                continue
+                            }
+                            bild = patterns[bildnummer - 1];
 
-                        if (welcheHand == "R") {
-                            push();
-                            translate(x * cell_size + cell_size / 2, y * cell_size + cell_size / 2);
-                            rotate(0);
-                            image(bild, -cell_size / 2, -cell_size / 2, cell_size, cell_size);
-                            pop();
 
-                            //blendMode(OVERLAY);
-                            tint(255, 255); //deckkraft
 
-                        } else {
-                            push();
-                            translate(x * cell_size + cell_size / 2, y * cell_size + cell_size / 2);
-                            rotate(0);
-                            image(bild, -cell_size / 2, -cell_size / 2, cell_size, cell_size);
-                            pop();
+                            if (welcheHand == "R") {
+                                push();
+                                translate(x * cell_size + cell_size / 2, y * cell_size + cell_size / 2);
+                                rotate(0);
+                                image(bild, -cell_size / 2, -cell_size / 2, cell_size, cell_size);
+                                pop();
+
+                                // blendMode(OVERLAY);
+                                tint(255, 250); //deckkraft
+
+                                //filter(BLUR, 3);
+
+
+
+
+                            } else {
+                                push();
+                                translate(x * cell_size + cell_size / 2, y * cell_size + cell_size / 2);
+                                rotate(90);
+                                image(bild, -cell_size / 2, -cell_size / 2, cell_size, cell_size);
+                                pop();
+
+
+
+                                tint(255, 250); //deckkraft
+                            }
                         }
-
-                        //square(x * cell_size, y * cell_size, cell_size)
 
                         //console.log(bild);
                     }

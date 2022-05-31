@@ -75,6 +75,11 @@ function setup() {
     let save_button = createButton("Speichern");
     save_button.position(40, 990);
     save_button.mousePressed(saveSketch);
+    save_button.style('background-color', '#050d3c');
+    save_button.style('color', '#893c6f');
+    save_button.style('border-color', '#893c6f');
+    save_button.style('border-radius', '10%');
+    save_button.style('padding', '0.3rem');
 
     angleMode(DEGREES);
 

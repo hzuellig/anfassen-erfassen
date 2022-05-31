@@ -22,7 +22,6 @@ body {
     font-style: normal;
     background-color: white;
     color: #050d3c;
-    background-color: white;
 }
 
 h1 {
@@ -107,6 +106,27 @@ a {
     font-family: Retalic_30_Lt;
 }
 
+#anfassen_main {
+    font-size: 2rem;
+}
+
+#anfassen_main:hover {
+    font-family: Italic_30_Lt;
+}
+
+#erfassen_main {
+    font-size: 2rem;
+}
+
+#erfassen_main:hover {
+    font-family: Retalic_30_Lt;
+}
+
+#current_link {
+    font-family: Italic_30_Lt;
+    color: #050d3c;
+}
+
 a.main_title {
     text-decoration: none;
     color: #893c6f;
@@ -118,8 +138,6 @@ a.main_title:hover {
 }
 
 a:hover {
-    color: #050d3c;
-    opacity: 100%;
     font-family: Italic_30_Lt;
 }
 
@@ -134,8 +152,12 @@ hr {
     margin-bottom: 0px;
 }
 
-header {
-    display: inline-block;
+.header {
+    display: block;
+    position: sticky;
+    top: 0;
+    background-color: white;
+    width: 100vw;
 }
 
 .img_coordinates_container {

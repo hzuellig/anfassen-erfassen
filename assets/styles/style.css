@@ -1,58 +1,63 @@
-        @font-face {
-            font-family: 'Retalic_30_Lt';
-            src: url('../fonts/GT-Planar-Retalic-30-Light-Trial.woff2') format('woff2');
-        }
-        
-        @font-face {
-            font-family: 'Italic_30_Lt';
-            src: url('../fonts/GT-Planar-Italic-30-Light-Trial.woff2') format('woff2');
-        }
-        
-        @font-face {
-            font-family: 'Regular_Lt';
-            src: url('../fonts/GT-Planar-Light-Trial.woff2') format('woff2');
-        }
-        
-        body {
-            background-color: #050d3c;
-            margin: 0;
-            color: #628497;
-            font-family: Helvetica, sans-serif;
-            height: 5000px;
-        }
-        
-        header {
-            display: flex;
-        }
-        
-        h1 {
-            font-family: 'Italic_30_Lt', 'Helvetica';
-            color: #893c6f;
-            margin: 0;
-            font-size: 2rem;
-            padding: 2rem;
-            display: inline;
-        }
-        
-        a.main_title {
-            text-decoration: none;
-            color: #893c6f;
-            font-size: 3rem;
-        }
-        
-        span {
-            font-family: 'Retalic_30_Lt';
-        }
-        
-        canvas {
-            display: block;
-        }
-        
-        a {
-            color: #893c6f;
-            font-size: 1.2 rem;
-            font-weight: 500;
-            text-decoration: none;
-            padding-left: 5%;
-            font-size: 1.4rem;
-        }
+@font-face {
+    font-family: 'Retalic_30_Lt';
+    src: url('../fonts/GT-Planar-Retalic-30-Light-Trial.woff2') format('woff2');
+}
+
+@font-face {
+    font-family: 'Italic_30_Lt';
+    src: url('../fonts/GT-Planar-Italic-30-Light-Trial.woff2') format('woff2');
+}
+
+@font-face {
+    font-family: 'Regular_Lt';
+    src: url('../fonts/GT-Planar-Light-Trial.woff2') format('woff2');
+}
+
+body {
+    margin: none;
+    padding-left: 1%;
+    padding-right: 12.5%;
+    font-family: Regular_Lt;
+    font-weight: 400;
+    font-style: normal;
+    background-color: #050d3c;
+    color: #050d3c;
+}
+
+h1 {
+    font-family: Italic_30_Lt;
+    display: inline-block;
+    color: #893c6f;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+a {
+    color: #893c6f;
+    font-size: 1.2 rem;
+    font-weight: 500;
+    text-decoration: none;
+    padding-left: 5%;
+    font-size: 1.4rem;
+}
+
+a.main_title {
+    text-decoration: none;
+    color: #893c6f;
+    font-size: 3rem;
+}
+
+a.main_title:hover {
+    font-family: Italic_30_Lt;
+}
+
+a:hover {
+    font-family: Italic_30_Lt;
+}
+
+.header {
+    position: sticky;
+    top: 0;
+}

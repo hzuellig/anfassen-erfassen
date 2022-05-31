@@ -69,8 +69,9 @@ html {
 }
 
 .item-left {
-    width: 25%;
+    width: 30%;
     padding-bottom: 0;
+    padding-left: 20px;
 }
 
 .nav {
@@ -79,7 +80,7 @@ html {
 }
 
 .content {
-    width: 75%;
+    width: 70%;
 }
 
 a {
@@ -88,6 +89,7 @@ a {
     font-weight: 500;
     text-decoration: none;
     padding-left: 5%;
+    padding-top: 2%;
     font-size: 1.4rem;
 }
 
@@ -153,7 +155,7 @@ hr {
 }
 
 .header {
-    display: block;
+    display: flex;
     position: sticky;
     top: 0;
     background-color: white;
@@ -193,6 +195,24 @@ hr {
     display: flex;
 }
 
+.img_patterns_container {
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 15px;
+}
+
 .img_haut {
     padding-right: 3rem;
+}
+
+.bildgruppe {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.entwurf {
+    width: 400px;
+    height: auto;
+    padding: 20px;
 }

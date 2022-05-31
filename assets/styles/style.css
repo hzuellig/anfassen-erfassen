@@ -40,7 +40,24 @@ a {
     font-weight: 500;
     text-decoration: none;
     padding-left: 5%;
+    padding-top: 2%;
     font-size: 1.4rem;
+}
+
+#anfassen_main {
+    font-size: 2rem;
+}
+
+#anfassen_main:hover {
+    font-family: Italic_30_Lt;
+}
+
+#erfassen_main {
+    font-size: 2rem;
+}
+
+#erfassen_main:hover {
+    font-family: Retalic_30_Lt;
 }
 
 a.main_title {
@@ -58,6 +75,9 @@ a:hover {
 }
 
 .header {
+    display: flex;
     position: sticky;
     top: 0;
+    background-color: #050d3c;
+    width: 100vw;
 }

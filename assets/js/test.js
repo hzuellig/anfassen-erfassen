@@ -1,10 +1,14 @@
 let test_data;
 
+let select = "Anna";
+
 var grid_unit = 50;
 
 let col = 14
 let row = 14
 let cell_size = 0;
+
+let counter = 0;
 
 let patterns = new Array();
 
@@ -81,7 +85,8 @@ function setup() {
 
     angleMode(DEGREES);
 
-    noLoop();
+    frameRate(10);
+    //noLoop();
 
 }
 
@@ -120,11 +125,19 @@ function get_hand(hand_data) {
 //Wird kontinuierlich ausgeführt
 function draw() {
 
-    grid()
-    for (let i = 0; i < test_data.length; i++) {
-        show_gesture(i)
+    //grid()
+    //for (let i = 0; i < counter; i++) {
+    if (test_data[counter].name == select) {
+        show_gesture(counter)
     }
 
+    //}
+
+    if (counter < test_data.length) {
+        counter++;
+    } else {
+        noLoop();
+    }
     stroke(255, 0, 0);
 
 
@@ -135,7 +148,7 @@ function draw() {
 function grid(value) {
     // background(50, 50, 50);
 
-    stroke(0, 0, 255);
+    //stroke(0, 0, 255);
     //noStroke();
 
     // console.log(face_positions)
@@ -176,7 +189,7 @@ function show_gesture(value) {
                             const parts = el.split("")
                             welcheHand = parts[0]
                             bildnummer = parts[1]
-                            console.log(bildnummer);
+
                             if (bildnummer == undefined) {
                                 continue
                             }
